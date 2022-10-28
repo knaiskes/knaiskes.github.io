@@ -2,7 +2,6 @@ html {
     font-family: Hack, Courier New, Courier, monospace;*/
     /*font-family: Verdana, sans-serif;*/
     font-style: bold;
-    font-size: 25px;
 }
 
 body {
@@ -13,14 +12,8 @@ body {
     overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    /*font-family: Hack, Courier New, Courier, monospace;*/
-}
+p { font-size: 18px; }
+
 
 h1,
 h2,
@@ -29,8 +22,9 @@ h4,
 h5,
 h6,
 a {
-    color: #1d4078;
+    color: #6163e8;
     text-decoration: none;
+    font-size: 25px;
 }
 
 
@@ -38,10 +32,10 @@ a {
     overflow: hidden;
     width: 100%;
     text-align: center;
-    background-color: #2c2f33;
-    padding: 10px;
+    background-color: #282b30;
+    padding: 2px;
     border-style: solid;
-    border-color: #00676A;
+    border-color: #058805;
     border-width: 1px;
 }
 
@@ -55,10 +49,12 @@ a {
 
 .navbar a:hover { background-color: #7289da; }
 
-#content {
-  margin: auto;
-  max-width: 70ch;
-  padding: 2ch;
+#content.content {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #FCFCFC;
 }
 
 #postamble {
