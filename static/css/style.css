@@ -1,0 +1,115 @@
+html {
+    font-family: Hack, Courier New, Courier, monospace;*/
+    /*font-family: Verdana, sans-serif;*/
+    font-style: bold;
+    font-size: 25px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /*font-family: Hack, Courier New, Courier, monospace;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    color: #1d4078;
+    text-decoration: none;
+}
+
+
+.navbar {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    background-color: #2c2f33;
+    padding: 10px;
+    border-style: solid;
+    border-color: #00676A;
+    border-width: 1px;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFFFFF;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover { background-color: #7289da; }
+
+#content {
+  margin: auto;
+  max-width: 70ch;
+  padding: 2ch;
+}
+
+#postamble {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /*
+    background-color: #2c2f33;
+    border-style: solid;
+    border-color: #00676A;
+    border-width: 1px;
+*/
+}
+
+/*
+#postamble a {
+    color: #1CAC78;
+    text-decoration: none;
+}
+*/
+
+
+/* code syntax highlighting */
+.org-keyword,
+.org-warning,
+.org-function-name,
+.org-css-selector {
+    color: #42ada6;
+}
+
+.org-string,
+.org-constant,
+.org-variable-name {
+  color: #95b1be;
+}
+
+.org-builtin {
+    color: #07b8ae;
+}
+
+.org-comment-delimiter,
+.org-comment,
+.org-doc {
+    color: #3f4a52;
+}
+
+.org-src-container {
+    background-color: #EFEDED;
+}
