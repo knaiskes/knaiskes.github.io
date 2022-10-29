@@ -32,7 +32,7 @@
 (defvar my-postamble
   (concat
    "<div id=\"postamble\">"
-   "Build with GNU/Emacs :)\n"
+   "Built with GNU/Emacs :)\n"
    "</div>"))
 
 ;; Define the publishing project
