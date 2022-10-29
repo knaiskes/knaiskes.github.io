@@ -2,3 +2,9 @@
 #+OPTIONS: title:nil
 
 * Hello, World!
+
+Welcome to my blog. A place where I will be sharing my notes about several
+topics around software development. I hope you can find something helpful
+and/or interesting here.
+
+P.S I will improve the design of my page, someday in the future!
