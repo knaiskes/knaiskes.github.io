@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create global npm directory on Linux</title>
+<meta name="generator" content="Org mode">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+<div id="preamble" class="status">
+<nav class="navbar"><a href="index.html">Home</a><a href="posts.html">Posts</a><a href="contact.html">Contact</a></nav><div id="content">
+</div>
+<div id="content">
+<h1 class="title">Create global npm directory on Linux</h1>
+<p>
+Recently, I tried for the first time to globally install a package with npm.
+The result was to face an error message, claiming that I have no permissions for
+such an action.
+</p>
+
+<blockquote>
+<p>
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator
+</p>
+</blockquote>
+
+<div id="outline-container-org9fe4aae" class="outline-2">
+<h2 id="org9fe4aae">The solution</h2>
+<div class="outline-text-2" id="text-org9fe4aae">
+<p>
+The best solution for my case was the following
+</p>
+</div>
+
+<div id="outline-container-orgf9c98b9" class="outline-3">
+<h3 id="orgf9c98b9">Create a .npm-global directory in home directory</h3>
+<div class="outline-text-3" id="text-orgf9c98b9">
+<div class="org-src-container">
+<pre class="src src-bash">$ mkdir ~/.npm-global
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5a7ecf" class="outline-3">
+<h3 id="orge5a7ecf">Create a ~/.npmrc file</h3>
+<div class="outline-text-3" id="text-orge5a7ecf">
+<p>
+This file should include the following
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash"><span class="org-variable-name">prefix</span>=/home/kiriakos/.npm-global
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3a4a593" class="outline-3">
+<h3 id="org3a4a593">Export npm PATH in  your ~/.bashrc</h3>
+<div class="outline-text-3" id="text-org3a4a593">
+<div class="org-src-container">
+<pre class="src src-bash">$ export <span class="org-variable-name">PATH</span>=~/.npm-global/bin:$<span class="org-variable-name">PATH</span>
+</pre>
+</div>
+
+<p>
+And then apply the changes by reloading your settings
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">$ source ~/.bashrc
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<div id="postamble">Built with GNU/Emacs :)
+</div>
+</div>
+</body>
+</html>
