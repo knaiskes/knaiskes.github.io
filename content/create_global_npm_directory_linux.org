@@ -1,0 +1,45 @@
+#+TITLE: Create global npm directory on Linux
+#+DATE: <2022-10-30 Sun>
+
+Recently, I tried for the first time to globally install a package with npm.
+The result was to face an error message, claiming that I have no permissions for
+such an action.
+
+#+BEGIN_QUOTE
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It is likely you do not have the permissions to access this file as the current user
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator
+#+END_QUOTE
+
+** The solution
+
+The best solution for my case was the following
+
+*** Create a .npm-global directory in home directory
+
+#+BEGIN_SRC bash
+  $ mkdir ~/.npm-global
+#+END_SRC
+
+*** Create a ~/.npmrc file
+
+This file should include the following
+
+#+BEGIN_SRC bash
+  prefix=/home/kiriakos/.npm-global
+#+END_SRC
+
+*** Export npm PATH in  your ~/.bashrc
+
+#+BEGIN_SRC bash
+  $ export PATH=~/.npm-global/bin:$PATH
+#+END_SRC
+
+And then apply the changes by reloading your settings
+
+#+BEGIN_SRC bash
+  $ source ~/.bashrc
+#+END_SRC

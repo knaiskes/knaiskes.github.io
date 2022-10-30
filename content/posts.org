@@ -1,1 +1,3 @@
 #+TITLE: Posts
+
+[[file:create_global_npm_directory_linux.org][Create global npm directory on Linux]]
